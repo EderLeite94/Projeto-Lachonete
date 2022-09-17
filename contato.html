@@ -5,8 +5,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="text.css">
-    <title>Lanchonete-Produtos</title>
+    <link rel="stylesheet" href="css/text.css">
+    <link rel="stylesheet" href="css/forms.css">
+    <script type="text/javascript" src="js/validacao.js"></script>
+    <title>Lanchonete-Contato</title>
 
 </head>
 
@@ -14,27 +16,53 @@
     <div class="headers">
         <div class="logo">
 
-            <img src="Lanchonete/Imagens/Logo.webp" alt="logo do site" width="50px" height="50px">
+            <img src="Imagens/Logo.webp" alt="logo do site" width="50px" height="50px">
         </div>
 
+        <div class="menu">
+    
+            <a class="link" href="index.html">Inicio</a>
+            <a class="link" href="produtos.html">Produtos</a>
+            <a class="link" href="contato.html">Contato</a>
+            <a class="link" href="sobre.html">Sobre</a>
+    
+        </div>
     </div>
 
 
     <div class="banner">
 
-        <img src="Lanchonete/Imagens/banner.jpg" alt="banner da tela " width="1280px">
-
-    </div>
-    <div class="menu">
-
-        <a class="link" href="Inicio.html">Inicio</a>
-        <a class="link" href="produtos.html">Produtos</a>
-        <a class="link" href="contato.html">Contato</a>
-        <a class="link" href="sobre.html">Sobre</a>
+        <img src="Imagens/banner.jpg" alt="banner da tela " width="100%">
 
     </div>
     
+    <div class="container-contato">
+        <div class="container-form " alt="Container do formulario">
+            <form action="" id="formulario" method="POST" name="formulario">
     
+                <label for="name">Nome Completo:</label>
+                <input type="text" id="name" name="name" placeholder="Digite seu Nome.." required>
+                <div id="resultado-name"></div>
+                <label for="lemail">E-mail</label>
+                <input type="text" id="lemail" name="lemail" placeholder="Digite o seu E-mail.." required>
+                <div id="resultado-email"></div>
+                <label for="lassunto">Assunto:</label>
+                <input type="text" id="lassunto" name="lassunto" placeholder="Qual o assunto..">
+                <div id="resultado-assunto"></div>
+    
+    
+                <label for="lmensagem">Mensagem: </label>
+                <textarea id="lmensagem" name="lmensagem" placeholder="Descreva seu assunto..."
+                    style="height:200px"></textarea>
+                    <div id="resultado-mensagem"></div>
+    
+                    
+                <button type="button" id="btn-validar" value="Enviar" onclick="validar()">Enviar</button>
+                <button onclick="Limpar()" type="reset" value="Limpar">Limpar</button>
+    
+            </form>
+        </div>
+    </div>
 
 
     </div>
