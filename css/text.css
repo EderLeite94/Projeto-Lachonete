@@ -1,48 +1,38 @@
-html,body {
-    
-
+html,body { 
     margin: 0;
     padding: 0;
     width: 100%;
-    grid-area: black;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #b8b0a0 ;
 }
 
 .headers {
     display: flex;
     background-color: #292826;
     flex-wrap: wrap;
-justify-content: space-between;
-align-items: center;
-
+    justify-content: space-between;
+    align-items: center;
+    padding-block: 10px;
+    padding-inline: 24px;
 }
 
 .logo {
     width: 100px;
-    margin: left;
 }
-
+.logo img {
+    border-radius: 10px;
+}
 .menu {
-    padding: 24px;
     text-align: center;
-    font-family: Raleway;
-    box-shadow: 2px 2px 8px rgba(141, 52, 52, 0.5);
-    background: #292826;
-    margin-left: 100px;
 }
 .link{
     transition: 0.4s;
     color: #9dbd0e;
-    font-size: 20px;
+    font-size: 18px;
     text-decoration: none;
     padding: 0 10px;
     margin: 0 10px;
   }
-.link:hover {
-    background-color: #ffffff;
-    color: #EEA200;
-    padding: 24px 10px;
-  }
-
 .banner {
 
     display: flex;
@@ -55,40 +45,19 @@ Conteudo Principal
 */
 .container {
     display: flex;
+    flex-wrap: wrap;
     width: 100%;
-    background-color: #b8b0a0 ;
-    
+    margin-top: 15px;
+    justify-content: center;
 }
 /*Conteudo Página Principal*/
 .conteudo-1{
-    margin-top: 30px;
-    margin-bottom: 30px;
+    width: 600px;
     margin-left: 30px;
     margin-right: 30px;
-    border: 2px solid blanchedalmond;
-}
-.conteudo-2{
-    margin-top: 130px;
     margin-bottom: 30px;
-    margin-left: 30px;
-    margin-right: 30px;
     border: 2px solid blanchedalmond;
-    flex-wrap: nowrap  wrap  wrap-reverse;
-      
-}
-.conteudo-3{
-    margin-top: 30px;
-    margin-bottom: 30px;
-    margin-left: 30px;
-    margin-right: 30px;
-    border: 2px solid blanchedalmond;
-}
-.conteudo-4{
-    margin-top: 130px;
-    margin-bottom: 30px;
-    margin-left: 30px;
-    margin-right: 50px;
-    border: 2px solid blanchedalmond;
+    
 }
 
 /*
@@ -97,18 +66,19 @@ Conteudo produtos
 .cont-produtos {
     display: flex;
     background-color: #b8b0a0 ;
-     flex-wrap: wrap;
-    float: left;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 .cont-1{
     width: 200px;
-    height: 250px;
-    border: #292826 solid;
-    border-radius: 15px 15px 15px 15px;
-    margin-top: 40px;
-    margin-bottom:20px;
-    margin-left: 150px;
-    margin-right: 20px;
+    border: #292826 1px solid;
+    border-radius: 15px;
+    background-color: #9dbd0e;
+    margin-inline: 60px;
+    margin-block: 15px;
+}
+.cont-1 img{
+    border-radius: 15px 15px 0 0 ;
 }
 #card-1{
     text-align: center;
@@ -118,18 +88,20 @@ Conteudo produtos
     margin: 0 auto;
     display: flex;
     justify-content: center;
-    background-color: #EEA200;
 }
 .footer{
-    max-width: 1350px;
-    margin: auto;
+    margin-top: 15px;
     padding: 20px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-   background: #292826;
-   color: aliceblue;
-
-
+    background: #292826;
+    color: aliceblue;
 }
-
+@media (max-width:570px) {
+    .logo{
+        width: fit-content;
+        margin-inline: auto;
+        margin-bottom: 15px;
+    }
+}
